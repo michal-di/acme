@@ -1,10 +1,12 @@
 Requires PHP 8.1
 
 ### How to run it
+
     composer install
     php app.php
 
 ### How to run tests
+
     ./vendor/bin/pest
 
 ### How it works
@@ -28,3 +30,20 @@ I wanted to keep this demo small, but in real app the `BasketService.php` in the
 declarative style. Best seen in `src/Domain/Model/Basket/Offers/SecondRedWidgetHalfPriceOffer.php`
 - Instead of using `float` type for prices, it uses a `Money` class which also handles currency.
 
+### Sample output
+
+Run `php app.php` in the command line, and you'll see:
+
+```
+BASKET (5)
+
+Product         Price       Discount
+------------------------------------
+Blue Widget     $7.95      
+Blue Widget     $7.95      
+Red Widget      $32.95     
+Red Widget      $32.95     
+Red Widget      $16.47      $16.48
+------------------------------------
+         Total: $98.27
+```
